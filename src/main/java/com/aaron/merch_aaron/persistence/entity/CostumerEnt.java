@@ -18,7 +18,7 @@ public class CostumerEnt {
     private String lastName;
 
     @Column(name="celular")
-    private Integer phoneNumber;
+    private Long phoneNumber;
 
     @Column(name="direccion")
     private String address;
@@ -53,11 +53,11 @@ public class CostumerEnt {
         this.lastName = lastName;
     }
 
-    public Integer getPhoneNumber() {
+    public Long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(Long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

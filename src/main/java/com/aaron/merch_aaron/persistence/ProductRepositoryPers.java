@@ -5,6 +5,7 @@ import com.aaron.merch_aaron.domain.repository.ProductRepository;
 import com.aaron.merch_aaron.persistence.crud.ProductCrudRepository;
 import com.aaron.merch_aaron.persistence.entity.ProductEnt;
 import com.aaron.merch_aaron.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,7 +13,9 @@ import java.util.Optional;
 
 @Repository
 public class ProductRepositoryPers implements ProductRepository {
+    @Autowired
     private ProductCrudRepository productCrudRepository;
+    @Autowired
     private ProductMapper mapper;
 
     public List<Product> getAll() {

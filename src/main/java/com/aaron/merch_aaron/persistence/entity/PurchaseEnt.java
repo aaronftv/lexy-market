@@ -23,7 +23,7 @@ public class PurchaseEnt {
     private String paymentType;
 
     @Column(name="comentario")
-    private String Comment;
+    private String comment;
 
     @Column(name="estado")
     private String status;
@@ -32,7 +32,7 @@ public class PurchaseEnt {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private CostumerEnt costumer;
 
-    @OneToMany(mappedBy = "purchase")
+    @OneToMany(mappedBy = "purchase", cascade = {CascadeType.ALL})
     private List<PurchasesProductEnt> products;
 
     public Integer getPurchaseId() {
@@ -68,11 +68,11 @@ public class PurchaseEnt {
     }
 
     public String getComment() {
-        return Comment;
+        return comment;
     }
 
     public void setComment(String comment) {
-        Comment = comment;
+        this.comment = comment;
     }
 
     public String getStatus() {
@@ -81,5 +81,21 @@ public class PurchaseEnt {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public List<PurchasesProductEnt> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<PurchasesProductEnt> products) {
+        this.products = products;
+    }
+
+    public CostumerEnt getCostumer() {
+        return costumer;
+    }
+
+    public void setCostumer(CostumerEnt costumer) {
+        this.costumer = costumer;
     }
 }
