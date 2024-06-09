@@ -1,2 +1,2 @@
-# merch-aaron
-Sprint Boot project for an API, Documented with Spring Doc OpenAPI
+# lexy-market
+API contained in a Sprint Boot project. Documented with Spring Doc OpenAPI
