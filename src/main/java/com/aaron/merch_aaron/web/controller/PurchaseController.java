@@ -2,14 +2,13 @@ package com.aaron.merch_aaron.web.controller;
 
 import com.aaron.merch_aaron.domain.Purchase;
 import com.aaron.merch_aaron.domain.service.PurchaseService;
-import org.mapstruct.Mapping;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/purchases")

@@ -12,5 +12,4 @@ public class OlaKeAseController {
     public String olaKeAcer() {
         return "Never stop learning! 🚀🚀💥";
     }
-
 }
